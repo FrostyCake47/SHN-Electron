@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <title>RPS</title>
-</head>
-<body>
-    <p>Hello world i guess?</p>
-</body>
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Boogaloo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="game">
+      <h1 class="title">Rock Paper Scissors</h1>
+      <h2>Make your choice!</h2>
+      <div class="game-container">
+        <div class="player-choices">
+            <h3 class="player-tag">
+                You
+            </h3>
+            <button class="rock">
+                <img src="assets/stone.png" alt="rock">
+            </button>
+            <button class="paper">
+                <img src="assets/paper.png" alt="paper">
+            </button>
+            <button class="scissors">
+                <img src="assets/scissors.png" alt="scissors">
+            </button>
+        </div>
+        <div class="playing-container">
+            <div class="player-select">
+                <img src="assets/stone.png" alt="">
+            </div>
+            <div class="partition">
+            </div>
+            <div class="bot-select">
+                <img src="assets/stone_bot.png" alt="">
+            </div>
+        </div>
+        <div class="bot-choices">
+            <h3 class="bot-tag">
+                Bot
+            </h3>
+            <button class="rock-bot">
+                <img src="assets/stone_bot.png" alt="rock">
+            </button>
+            <button class="paper-bot">
+                <img src="assets/paper_bot.png" alt="paper">
+            </button>
+            <button class="scissors-bot">
+                <img src="assets/scissors_bot.png" alt="scissors">
+            </button>
+        </div>
+      </div>
+      <div class="result">
+        <h4 class="score-text">Score: <span id="score">0</span></h4>
+      </div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
 </html>
