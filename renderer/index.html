@@ -17,23 +17,26 @@
             <h3 class="player-tag">
                 You
             </h3>
-            <button class="rock">
+            <button class="rock" id="rock">
                 <img src="assets/stone.png" alt="rock">
             </button>
-            <button class="paper">
+            <button class="paper" id="paper">
                 <img src="assets/paper.png" alt="paper">
             </button>
-            <button class="scissors">
+            <button class="scissors" id="scissors">
                 <img src="assets/scissors.png" alt="scissors">
             </button>
+            <h3 class="player-score">
+                Score: <span id="player-score">0</span>
+            </h3>
         </div>
         <div class="playing-container">
-            <div class="player-select">
+            <div class="player-select" id="user">
                 <img src="assets/stone.png" alt="">
             </div>
             <div class="partition">
             </div>
-            <div class="bot-select">
+            <div class="bot-select" id="bot">
                 <img src="assets/stone_bot.png" alt="">
             </div>
         </div>
@@ -50,12 +53,16 @@
             <button class="scissors-bot">
                 <img src="assets/scissors_bot.png" alt="scissors">
             </button>
+            <h3 class="bot-score">
+                Score: <span id="bot-score">0</span>
+            </h3>
         </div>
       </div>
       <div class="result">
-        <h4 class="score-text">Score: <span id="score">0</span></h4>
+        <h4 class="winner-text" id="winner-text">Keep playing!</h4>
+        <button id="play-again">Play Again</button>
       </div>
     </div>
-    <script src="renderer.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>
