@@ -9,44 +9,8 @@ function CreateMainWindow(){
         height: 1080/2,
     });
     mainWindow.loadFile(path.join(__dirname, '/renderer/index.html'));
-}
-
-ipcMain.on('rock', function(){
-    console.log('ffs sake');
-})
-
-function winCheck(userScore, CPUScore){
-    var winner = null
-    if (userScore == 5){
-        winner = "User";
-    }
-    else if (CPUScore == 5){
-        winner = "CPU";
-    }
-    console.log(winner);
-    return winner;
-}
-
-function roundCheck(userChoice, CPUChoice){
-    
-}
-
-function game(){
-    const RPS = ["Rock", "Paper", "Scissor"];
-    let canChoose = true;
-    let userScore = 0;
-    let CPUScore = 0;
-
-    while (winCheck(userScore, CPUScore) == null){
-        var CPUChoice = RPS[Math.floor(Math.random()*RPS.length)];
-        var userChoice = prompt("Enter your choice: ");
-        
-        roundCheck(userChoice, CPUChoice);
-
-    }
-    
-
-
+    mainWindow.maximize();
+    //mainWindow.webContents.openDevTools()
 }
 
 
@@ -58,6 +22,12 @@ app.whenReady().then(() => {
         }
     });
 
-    game();
-
+    app.on('activate', () => {
+        if (BrowserWindow.getAllWindows().length === 0) createWindow()
+      })
 })
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit()
+  })
+  
