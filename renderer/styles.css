@@ -7,7 +7,7 @@
     --primary: #2E2140;
     --secondary: #F27777;
 
-    --hand-size: 200px;
+    --hand-size: 100px;
 
     font-family: 'Boogaloo', sans-serif;
 }
@@ -28,7 +28,7 @@ body {
 .game h2 {
     font-size: 3rem;
     color: var(--primary);
-    margin: 50px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
     text-align: center;
 }
 
@@ -44,6 +44,8 @@ body {
 /* Aligning and reshaping all elements */
 
 .player-choices, .bot-choices {
+    margin-left: 50px;
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,8 +85,31 @@ body {
     border-radius: 10px;
 }
 
-.score-text {
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.winner-text {
     color: var(--primary);
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
+}
+
+#play-again {
+    display: none;
+    align-self: center;
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    background-color: var(--primary);
+    color: var(--bg);
+    transition: 0.2s;
+    border: none;
+}
+
+#play-again:hover {
+    cursor: pointer;
+    color: var(--secondary);
 }
