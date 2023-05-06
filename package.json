@@ -1,0 +1,20 @@
+{
+  "name": "rps",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissor minigame",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrostyCake47/SHN-Electron.git"
+  },
+  "author": "Akash P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrostyCake47/SHN-Electron/issues"
+  },
+  "homepage": "https://github.com/FrostyCake47/SHN-Electron#readme"
+}
