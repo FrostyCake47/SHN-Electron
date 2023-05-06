@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    --bg: #F2C5BB;
+    --primary: #2E2140;
+    --secondary: #F27777;
+
+    --hand-size: 200px;
+
+    font-family: 'Boogaloo', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+/* Main title */
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--primary);
+    margin: 1rem;
+}
+
+.game h2 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin: 50px 0px 20px 0px;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+}
+
+.game-container h3 {
+    font-size: 3rem;
+    color: var(--primary)
+}
+
+/* Aligning and reshaping all elements */
+
+.player-choices, .bot-choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-choices button, .bot-choices button{
+    width: calc(var(--hand-size)*1.5);
+    background-color: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+.player-choices button img, .bot-choices img {
+    height: var(--hand-size);
+    width: var(--hand-size);
+}
+
+.player-choices button:hover {
+    cursor: pointer;
+    transform: translate(0px, -20px);
+}
+
+.playing-container {
+    background-color: var(--secondary);
+    width: calc(100vw - var(--hand-size) - 50px);
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.partition {
+    background-color: #4C2C59;
+    height: 80%;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.score-text {
+    color: var(--primary);
+    font-size: 4rem;
+    text-align: center;
+}
